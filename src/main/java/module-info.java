@@ -12,5 +12,6 @@ module com.example.sudoku {
     requires com.almasb.fxgl.all;
 
     opens com.example.sudoku to javafx.fxml;
-    exports com.example.sudoku;
+
+    opens trash to javafx.fxml;
 }
