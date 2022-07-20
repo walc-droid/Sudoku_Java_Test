@@ -116,13 +116,16 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View,
 
                 styleSudokuTile(tile,x,y);
 
+                tile.setOnKeyPressed(this);
+                textFieldCoordinates.put(new Coordinates(xIndex,yIndex),tile);
+                root.getChildren().add(tile);
             }
         }
 
 
     }
 
-    private void styleSudokuTile(SudokuTextField tile, double x, double y {
+    private void styleSudokuTile(SudokuTextField tile, double x, double y) {
         Font numberFont = new Font(32);
         tile.setFont(numberFont);
         tile.setAlignment(Pos.CENTER);
